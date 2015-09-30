@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c) 2015. Rahul Janagouda
+  -->
+
 <resources>
-    <string name="app_name">Cat In The Hat</string>
+    <string name="app_name">My Portfolio</string>
 </resources>

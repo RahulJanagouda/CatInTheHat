@@ -1,13 +1,19 @@
+/*
+ * Copyright (c) 2015. Rahul Janagouda
+ */
+
 package com.janagouda.rahul.catinthehat;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
 
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     @Override
@@ -19,40 +25,39 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         toolbar.setBackgroundColor(getResources().getColor(R.color.primary_dark));
         toolbar.setLogo(getResources().getDrawable(R.mipmap.ic_launcher));
 
-        findViewById(R.id.the_cat_button).setOnClickListener(this);
-        findViewById(R.id.thing_one_button).setOnClickListener(this);
-        findViewById(R.id.thing_two_button).setOnClickListener(this);
-        findViewById(R.id.thingmajigger_button).setOnClickListener(this);
-        findViewById(R.id.sally_button).setOnClickListener(this);
-        findViewById(R.id.nick_button).setOnClickListener(this);
-        findViewById(R.id.dr_seuss_button).setOnClickListener(this);
+        findViewById(R.id.spotify_streamer_button).setOnClickListener(this);
+        findViewById(R.id.scores_app_button).setOnClickListener(this);
+        findViewById(R.id.library_app_button).setOnClickListener(this);
+        findViewById(R.id.build_it_bigger_button).setOnClickListener(this);
+        findViewById(R.id.xyz_reader_button).setOnClickListener(this);
+        findViewById(R.id.capstone_button).setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
-        String toastMessage = "";
+        String toastMessage = "It launches ";
         switch (v.getId()){
-            case R.id.the_cat_button:
-                toastMessage+="Can I has the poland?";
+            case R.id.spotify_streamer_button:
+                toastMessage += "Spotify Streamer App";
                 break;
-            case R.id.thing_one_button:
-                toastMessage+="Numero Uno";
+            case R.id.scores_app_button:
+                toastMessage += "Scores App";
                 break;
-            case R.id.thing_two_button:
-                toastMessage+="Gotta do a number two";
+            case R.id.library_app_button:
+                toastMessage += "Library App";
                 break;
-            case R.id.thingmajigger_button:
-                toastMessage+="Are you a wizard??";
+            case R.id.build_it_bigger_button:
+                toastMessage += "“Build it bigger App";
                 break;
-            case R.id.sally_button:
-                toastMessage+="You see? That is just like you, Harry. You say things like that, and you make it impossible for me to hate you.";
+            case R.id.xyz_reader_button:
+                toastMessage += "XYZ Reader";
                 break;
-            case R.id.nick_button:
-                toastMessage+="“If you can't get a miracle, become one.― Nick Vujicic";
+            case R.id.capstone_button:
+                toastMessage += "Capstone";
                 break;
-            case R.id.dr_seuss_button:
-                toastMessage+="Don't cry because it's over, smile because it happened.― Dr. Seuss";
+            default:
+                toastMessage += "Nothing";
                 break;
         }
         Toast.makeText(this,toastMessage,Toast.LENGTH_SHORT).show();
